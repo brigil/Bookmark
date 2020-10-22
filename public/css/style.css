@@ -1,0 +1,46 @@
+/*footer*/
+.ankle {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    margin-bottom: 180px;
+    text-align: center;
+}
+.copyR { 
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    color:  #282828;
+    text-align: center;
+   
+}
+span {
+
+    color:#cc0000;
+    font-weight: bold;
+}
+.gitPic {
+    height: 30px;
+  }
+ 
+.ourPic {
+    border-radius: 50px;
+    height: 40px;
+}
+.connect {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    margin-bottom: 50px;
+    text-align: center;
+}
+footer{
+    background-color: deeppink;
+}
+
+
+

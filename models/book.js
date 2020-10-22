@@ -1,5 +1,8 @@
+/* eslint-disable camelcase */
+/* eslint-disable indent */
+/* eslint-disable prettier/prettier */
 module.exports = function (sequelize, DataTypes) {
-    var Book = sequelize.define("Book", {
+    const Book = sequelize.define("Book", {
         title: DataTypes.TEXT,
         series: DataTypes.TEXT,
         cover_link: DataTypes.TEXT,
@@ -12,9 +15,9 @@ module.exports = function (sequelize, DataTypes) {
         recommendation: DataTypes.TEXT,
         description: DataTypes.TEXT
     },
-    {
-        timestamps: false
-    });
+        {
+            timestamps: false
+        });
 
     return Book;
 };

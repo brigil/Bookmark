@@ -70,7 +70,7 @@ module.exports = function (app) {
   app.get("/api/author", (req, res) => {
     db.Book.findOne({
       where: {
-        author: "Christian"
+        author: "Jim Butcher"
       }
     }).then(response => {
       console.log(response.id);

@@ -20,6 +20,7 @@ $(document).ready(() => {
     function displayResults(book) {
 
         const resultDiv = $("#results");
+        resultDiv.empty()
         // let title = $("<p>");
         // let author = $("<p>");
         // let cover = $("<img>");

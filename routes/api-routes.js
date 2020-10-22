@@ -1,8 +1,9 @@
+/* eslint-disable prettier/prettier */
 // Requiring our models and passport as we've configured it
 const db = require("../models");
 const passport = require("../config/passport");
 
-module.exports = function(app) {
+module.exports = function (app) {
   // Using the passport.authenticate middleware with our local strategy.
   // If the user has valid login credentials, send them to the members page.
   // Otherwise the user will be sent an error
@@ -51,16 +52,40 @@ module.exports = function(app) {
     }
   });
 
-  app.get("/api/index", (req, res) => {
-    console.log("im in api call");
-
+  app.get("/api/title", (req, res) => {
     db.Book.findOne({
       where: {
-        id: 1
+        title: "Christian"
       }
-    }).then(book => {
-      console.log(book.title);
-      res.json(book.title);
+    }).then(response => {
+      console.log(response.id);
+      console.log(response.author);
+      console.log(response.number_of_pages);
+      console.log(response.amazon_link);
+      console.log("Success!");
+      res.json(response);
     });
+  });
+
+  app.get("/api/author", (req, res) => {
+    db.Book.findOne({
+      where: {
+        author: "Christian"
+      }
+    }).then(response => {
+      console.log(response.id);
+      console.log(response.author);
+      console.log(response.number_of_pages);
+      console.log(response.amazon_link);
+      console.log("Success!");
+      res.json(response);
+    });
+  });
+
+  app.post("/api/book", (req, res) => {
+    db.Book.create(req.body)
+      .then((book) => {
+        res.json(book);
+      });
   });
 };

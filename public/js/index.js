@@ -113,8 +113,8 @@ $(document).ready(() => {
             else {
                 resultDiv.append("<p>Rating: N/A</p>");
             }
-            
-            if (Book.number_of_pages !== null) {
+
+            if (book.number_of_pages !== null) {
                 resultDiv.append("<p>Number of Pages: " + book[randomBook].number_of_pages + "</p>");
             }
             else {

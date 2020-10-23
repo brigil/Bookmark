@@ -4,7 +4,7 @@
 $(document).ready(() => {
 
     $("#get-author").on("click", getAuthor);
-    $("#get-title").on("click", logHi);
+    $("#get-title").on("click", getTitle);
     // $("#make-book").on("click", insertBook({
     //     title: "Christian",
     //     cover_link: null,
@@ -15,9 +15,7 @@ $(document).ready(() => {
     //     genre: "Mystery",
     //     description: "the best book ever written"
     // }));
-   function logHi () {
-       console.log($("#title-input").val());
-   }
+
 
 
     function displayResults(book) {
@@ -58,13 +56,12 @@ $(document).ready(() => {
     }
 
     function getTitle() {
-        $.get("/api/title", data => {
-            console.log(data);
-        }).then(response => {
-            displayResults(response);
+        const title = {
+            title: $("#title-input").val()
+        };
+
+        $.post("/api/title", title).then( data => {
+            displayResults(data);
         });
     }
-
-
-
 });

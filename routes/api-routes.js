@@ -52,10 +52,11 @@ module.exports = function (app) {
     }
   });
 
-  app.get("/api/title", (req, res) => {
+  app.post("/api/title", (req, res) => {
+    console.log(req.body);
     db.Book.findOne({
       where: {
-        title: "Christian"
+        title: req.body.title
       }
     }).then(response => {
       console.log(response.id);

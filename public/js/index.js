@@ -101,7 +101,7 @@ $(document).ready(() => {
                 resultDiv.append("<img src='" + book[randomBook].cover_link + "' alt='book cover'>");
             }
             else {
-                resultDiv.append("<img src='https://via.placeholder.com/250'>");
+                resultDiv.append("<img src='https://via.placeholder.com/200'>");
             }
 
             resultDiv.append("<p>Title: " + book[randomBook].title + "</p>");

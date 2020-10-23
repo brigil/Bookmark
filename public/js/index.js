@@ -18,6 +18,10 @@ $(document).ready(() => {
     //     description: "the best book ever written"
     // }));
 
+    $("#search-button").on("click", () => {
+        console.log("no u");
+    });
+
 
     function displayOneBook(book) {
         $("#title-input").val("");

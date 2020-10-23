@@ -3,7 +3,7 @@
 /* eslint-disable prettier/prettier */
 $(document).ready(() => {
 
-    init();
+    // init();
 
     $("#get-author").on("click", getAuthor);
     $("#get-title").on("click", getTitle);
@@ -19,7 +19,8 @@ $(document).ready(() => {
     // }));
 
     $("#search-button").on("click", () => {
-        console.log("no u");
+        console.log("2 + 2 is 4");
+        $(".search-elements").removeClass("is-hidden");
     });
 
 

@@ -68,10 +68,10 @@ module.exports = function (app) {
     });
   });
 
-  app.get("/api/author", (req, res) => {
-    db.Book.findOne({
+  app.post("/api/author", (req, res) => {
+    db.Book.findAll({
       where: {
-        author: "Jim Butcher"
+        author: req.body.author
       }
     }).then(response => {
       console.log(response.id);

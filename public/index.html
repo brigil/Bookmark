@@ -3,17 +3,18 @@
 
 <head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Custom Style Sheet  -->
-    <link rel="stylesheet" href="./css/style.css" />
-    <title>Bookmark</title>
-    <link rel="shortcut icon" type="image/png" href="img/favicon.png"> 
-    <!-- Bulma.io Framework -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.min.css"
-        integrity="sha512-ZRv40llEogRmoWgZwnsqke3HNzJ0kiI0+pcMgiz2bxO6Ew1DVBtWjVn0qjrXdT3+u+pSN36gLgmJiiQ3cQtyzA=="
-        crossorigin="anonymous">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Custom Style Sheet  -->
+  <link rel="stylesheet" href="./css/style.css" />
+  <title>Bookmark</title>
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+  <!-- Bulma.io Framework -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.min.css"
+    integrity="sha512-ZRv40llEogRmoWgZwnsqke3HNzJ0kiI0+pcMgiz2bxO6Ew1DVBtWjVn0qjrXdT3+u+pSN36gLgmJiiQ3cQtyzA=="
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+    integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
 
 
 </head>
@@ -47,7 +48,7 @@
         </a>
       </div>
     </div>
-    
+
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="buttons">
@@ -64,37 +65,38 @@
     </div>
   </nav>
 
-
-  <section class="section is-medium" style="background-image: url(./img/books_old_reading_\ 2.jpg)">
-    <div class="container has-text-centered" style="display: flex; justify-content: center">
-      <div class="field has-addons ">
-        <p class="control">
-          <a class="button">
-            <span class="icon is-small">
-                            <i class="fas fa-bookmark"></i>
-                          </span>
-            <span>Recomended</span>
-          </a>
-        </p>
-        <p class="control">
-          <a class="button">
-            <span class="icon is-small">
-                            <i class="fas fa-search"></i>
-                          </span>
-            <span>Search</span>
-          </a>
-        </p>
-        <p class="control">
-          <a class="button">
-            <span class="icon is-small">
-                            <i class="fas fa-book"></i>
-                          </span>
-            <span>Add a book</span>
-          </a>
-        </p>
+  <section class="section is-medium" style="background-color: #4d4d4d;  border-bottom: 3px solid black">
+    <div class="container">
+      <div class="column has-text-centered" style="display: flex; justify-content: center">
+        <div class="field has-addons ">
+          <p class="control">
+            <a class="button">
+              <span class="icon is-small">
+                <i class="fas fa-bookmark"></i>
+              </span>
+              <span>Recomended</span>
+            </a>
+          </p>
+          <p class="control">
+            <a class="button">
+              <span class="icon is-small">
+                <i class="fas fa-search"></i>
+              </span>
+              <span>Search</span>
+            </a>
+          </p>
+          <p class="control">
+            <a class="button">
+              <span class="icon is-small">
+                <i class="fas fa-book"></i>
+              </span>
+              <span>Add a book</span>
+            </a>
+          </p>
+        </div>
       </div>
     </div>
-    <div class="container" style="width: 20%; padding: 10px;">
+    <div class="column" style="padding: 10px; display: flex; justify-content: center;">
       <div class="field is-grouped">
         <p class="control is-expanded">
           <input id="author-input" class="input" type="text" placeholder="Search by author">
@@ -106,8 +108,7 @@
         </p>
       </div>
     </div>
-
-    <div class="container" style="width: 20%; padding: 10px;">
+    <div class="column" style="padding: 10px;  display: flex; justify-content: center;">
       <div class="field is-grouped">
         <p class="control is-expanded">
           <input id="title-input" class="input" type="text" placeholder="Search by title">
@@ -119,15 +120,18 @@
         </p>
       </div>
     </div>
+  </div>
   </section>
 
   <section class="section is-medium" style="background-color: #e6e6e6;">
-    <div class="container has-text-centered">
-      <div class="results">
-        <h1>WE MADE IT</h1>
-        <a href="signup.html">signup</a>
-        <p id="text">did i change?</p>
-        </h2>
+    <div class="container">
+      <div class="column has-text-centered">
+        <div class="results">
+          <h1>WE MADE IT</h1>
+          <a href="signup.html">signup</a>
+          <p id="text">did i change?</p>
+          </h2>
+        </div>
       </div>
     </div>
   </section>

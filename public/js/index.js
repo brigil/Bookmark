@@ -19,18 +19,8 @@ $(document).ready(() => {
 
     function displayResults(book) {
 
-        const resultDiv = $("#results");
+        const resultDiv = $(".results");
         resultDiv.empty();
-        // let title = $("<p>");
-        // let author = $("<p>");
-        // let cover = $("<img>");
-        // let series = $("<p>");
-        // let rating = $("<p>");
-        // let numberOfPages = $("<p>");
-        // let date = $("<p>");
-        // let genre = $("<p>");
-        // let amazon = $("<p>");
-        // let description = $("<p>");
 
         if (book.cover_link !== null && book.cover_link !== "") {
             resultDiv.append("<img src='" + book.cover_link + "' alt='book cover'>");

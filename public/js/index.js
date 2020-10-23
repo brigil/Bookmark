@@ -4,7 +4,7 @@
 $(document).ready(() => {
 
     $("#get-author").on("click", getAuthor);
-    $("#get-title").on("click", getTitle);
+    $("#get-title").on("click", logHi);
     // $("#make-book").on("click", insertBook({
     //     title: "Christian",
     //     cover_link: null,
@@ -15,6 +15,9 @@ $(document).ready(() => {
     //     genre: "Mystery",
     //     description: "the best book ever written"
     // }));
+   function logHi () {
+       console.log($("#title-input").val());
+   }
 
 
     function displayResults(book) {

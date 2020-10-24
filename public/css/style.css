@@ -1,16 +1,27 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+} 
+
 /*footer*/
-.ankle {
+.ankle{
     left: 0;
     bottom: 0;
     width: 100%;
     text-align: center;
 }
+
+
 .copyR { 
     left: 0;
     bottom: 0;
     width: 100%;
     text-align: center;
     font-family: Jazz LET, fantasy;
+    padding-bottom: 10px;
+    margin-bottom: -15px
+
 }
 
 .markF, .connect {
@@ -37,8 +48,7 @@
     bottom: 0;
     width: 100%;
     margin-bottom: 50px;
-    padding-left: 50px;
-   
+    padding-left: 50px; 
 }
 footer{
     background-color:white;
@@ -47,15 +57,46 @@ footer{
 }
 
 
-#navHome {
- color: black;
- padding-top: 20px;
+#homeBtn {
+ color: white;
+ background-color: black;
+ margin-top: 10px;
  font-family: Arial, Helvetica, sans-serif;
+ float: right;
+ margin-right: 5px;
+ 
 }
 
-#navlogIn, #navlogOut {
+#signupBtn {
     color: black;
-    padding-top: 20px;
+    margin-top: 10px;
     font-family: Arial, Helvetica, sans-serif;
-     
+    float: right;
+    margin-right: 5px;     
 }
+
+.navbar{
+    background-color: white;
+}
+
+.loginPage, .memberPage, .signupPage {
+    background-image: url("../img/pexels-janko-ferlic-590493.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    
+}
+
+.card-body{
+    background-color: rgba(245, 245, 245, 0.5);
+    margin-top: 80px;
+    padding: 40px;
+    padding-bottom: 80px; 
+    border-radius: 5px;
+    text-align: center;
+}
+
+
+
+
+

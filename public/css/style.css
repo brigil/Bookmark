@@ -96,6 +96,12 @@ footer{
     text-align: center;
 }
 
+#forImg {
+    background-image: url("../img/books_old_reading_124989_2560x1080.jpg");
+    height: 400px;
+    background-size: cover;
+}
+
 
 
 

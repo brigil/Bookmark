@@ -7,16 +7,7 @@ $(document).ready(() => {
 
     $("#get-author").on("click", getAuthor);
     $("#get-title").on("click", getTitle);
-    // $("#make-book").on("click", insertBook({
-    //     title: "Christian",
-    //     cover_link: null,
-    //     author: "Christian",
-    //     number_of_pages: "100",
-    //     date_published: "2020",
-    //     publisher: "Christian",
-    //     genre: "Mystery",
-    //     description: "the best book ever written"
-    // }));
+    $("#input-submit").on("click", insertBook);
 
     $("#search-button").on("click", () => {
         console.log("2 + 2 is 4");
@@ -71,12 +62,22 @@ $(document).ready(() => {
 
     }
 
-    // function insertBook(book) {
-    //     $.post("/api/book", book)
-    //         .then(() => {
-    //             alert("Book Added!");
-    //         });
-    // }
+    function insertBook() {
+        const book = {
+            title: $("#book-title-input").val(),
+            cover_link: null,
+            author: $("#book-author-input").val(),
+            number_of_pages: $("#number-of-pages").val(),
+            date_published: $("#date-published").val(),
+            publisher: $("#publisher").val(),
+            genre: $("#genre").val(),
+            description: $("#description").val()
+        };
+        $.post("/api/create-book", book)
+            .then(() => {
+                alert("Book Added!");
+            });
+    }
 
     function init() {
         $.get("/api/books", (data) => {

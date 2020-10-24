@@ -76,10 +76,6 @@ module.exports = function (app) {
         author: req.body.author
       }
     }).then(response => {
-      console.log(response.id);
-      console.log(response.author);
-      console.log(response.number_of_pages);
-      console.log(response.amazon_link);
       console.log("Success!");
       res.json(response);
     });
@@ -98,4 +94,11 @@ module.exports = function (app) {
         res.json(book);
       });
   });
+
+  app.post("/ap.create-books", (req, res) => {
+    db.Book.create(req.body).then( response => {
+      res.json(response);
+    });
+  });
+
 };

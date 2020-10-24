@@ -12,8 +12,15 @@ $(document).ready(() => {
     $("#search-button").on("click", () => {
         console.log("2 + 2 is 4");
         $(".search-elements").removeClass("is-hidden");
+        $(".create-elements").addClass("is-hidden");
     });
 
+    $("#create-button").on("click", () => {
+        console.log("2 + 2 is 4");
+        $(".create-elements").removeClass("is-hidden");
+        $(".search-elements").addClass("is-hidden");
+
+    });
 
     function displayOneBook(book) {
         $("#title-input").val("");
@@ -73,6 +80,7 @@ $(document).ready(() => {
             genre: $("#genre").val(),
             description: $("#description").val()
         };
+        console.log(book);
         $.post("/api/create-book", book)
             .then(() => {
                 alert("Book Added!");

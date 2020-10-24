@@ -95,7 +95,7 @@ module.exports = function (app) {
       });
   });
 
-  app.post("/ap.create-books", (req, res) => {
+  app.post("/api/create-book", (req, res) => {
     db.Book.create(req.body).then( response => {
       res.json(response);
     });

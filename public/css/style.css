@@ -1,8 +1,8 @@
-/* *,
+*,
 *::before,
 *::after {
   box-sizing: border-box;
-}  */
+} 
 
 /*footer*/
 .ankle{
@@ -10,13 +10,22 @@
     bottom: 0;
     width: 100%;
     text-align: center;
+    background-color:white;
+    border-color: black;
+    border-top: solid; 
    
 }
 .copyR1 {
-    left: 0;
-    bottom: 0;
-    width: 100%;
+    bottom: 0; left: 0; right: 0;
+    height: 78px;
+    position: fixed;
     text-align: center;
+    background-color:white;
+    border-color: black;
+    border-top: solid; 
+    margin-bottom: -20px;
+    padding-top: 20px ;
+    
 }
 
 
@@ -57,11 +66,7 @@
     margin-bottom: 50px;
     padding-left: 50px; 
 }
-footer{
-    background-color:white;
-    border-color: black;
-    border-top: solid;
-}
+
 
 
 #homeBtn {
@@ -88,11 +93,17 @@ footer{
 
 .loginPage, .memberPage, .signupPage {
     background-image: url("../img/pexels-janko-ferlic-590493.jpg");
+    background-attachment: fixed;
+    background-size: 100%;
     background-size: cover;
-    background-repeat: no-repeat;
-    
-    
+    background-position: center;
+   
+   
+   
 }
+
+
+
 
 .card-body{
     background-color: rgba(245, 245, 245, 0.5);
@@ -157,7 +168,7 @@ footer{
     color: black;
     
   }
-  .details, p {
+  .details, .p1 {
     color: white;
     font-size: 14px;
     padding: 10px;

@@ -1,7 +1,9 @@
+/* eslint-disable camelcase */
 /* eslint-disable prettier/prettier */
 // Requiring our models and passport as we've configured it
 const db = require("../models");
 const passport = require("../config/passport");
+const { Op } = require("sequelize");
 
 module.exports = function (app) {
   // Using the passport.authenticate middleware with our local strategy.
@@ -83,9 +85,16 @@ module.exports = function (app) {
     });
   });
 
-  app.post("/api/book", (req, res) => {
-    db.Book.create(req.body)
+  app.get("/api/books", (req, res) => {
+    db.Book.findAll({
+      where: {
+        average_rating: {
+          [Op.gte]: 4.9
+        }
+      }
+    })
       .then((book) => {
+        console.log(book);
         res.json(book);
       });
   });

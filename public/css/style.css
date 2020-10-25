@@ -1,8 +1,8 @@
-*,
+/* *,
 *::before,
 *::after {
   box-sizing: border-box;
-} 
+}  */
 
 /*footer*/
 .ankle{
@@ -11,9 +11,15 @@
     width: 100%;
     text-align: center;
 }
+.copyR1 {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
 
 
-.copyR { 
+.copyR  { 
     left: 0;
     bottom: 0;
     width: 100%;

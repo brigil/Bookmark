@@ -27,7 +27,7 @@
       <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
         data-target="navbarBasicExample">
         <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>nod
         <span aria-hidden="true"></span>
       </a>
     </div>
@@ -48,10 +48,10 @@
       </div>
     </div>
   </nav>
-<!--End of navbar-->
+  <!--End of navbar-->
 
-  <section id="forImg" class="section is-medium" style="background-color: #4d4d4d;  border-bottom: 3px solid black; border-top: 3px solid black">
-    <div class="container">
+  <section class="section is-large" style="background-color: #4d4d4d;  border-bottom: 3px solid black">
+    <div class="container" style="bottom: 130px;">
       <div class="column has-text-centered" style="display: flex; justify-content: center">
         <div class="field has-addons ">
           <p class="control">
@@ -71,7 +71,7 @@
             </a>
           </p>
           <p class="control">
-            <a class="button">
+            <a id="create-button" class="button">
               <span class="icon is-small">
                 <i class="fas fa-book"></i>
               </span>
@@ -80,7 +80,7 @@
           </p>
         </div>
       </div>
-    </div>
+    
     <div class="column search-elements is-hidden" style="padding: 10px; display: flex; justify-content: center;">
       <div class="field is-grouped">
         <p class="control is-expanded">
@@ -105,11 +105,65 @@
         </p>
       </div>
     </div>
+    <div class="column create-elements is-hidden" style="padding: 10px; display: flex; justify-content: center;">
+      <div class="field is-grouped">
+        <p class="control is-expanded">
+          <input id="book-title-input" class="input" type="text" placeholder="Enter Title">
+        </p>
+      </div>
+    </div>
+    <div class="column create-elements is-hidden" style="padding: 10px;  display: flex; justify-content: center;">
+      <div class="field is-grouped">
+        <p class="control is-expanded">
+          <input id="book-author-input" class="input" type="text" placeholder="Enter Author">
+        </p>
+      </div>
+    </div>
+    <div class="column create-elements is-hidden" style="padding: 10px; display: flex; justify-content: center;">
+      <div class="field is-grouped">
+        <p class="control is-expanded">
+          <input id="number-of-pages is-hidden" class="input" type="text" placeholder="Enter Number of Pages">
+        </p>
+      </div>
+    </div>
+    <div class="column create-elements is-hidden" style="padding: 10px;  display: flex; justify-content: center;">
+      <div class="field is-grouped">
+        <p class="control is-expanded">
+          <input id="date-published" class="input" type="text" placeholder="Enter Date Published">
+        </p>
+      </div>
+    </div>
+    <div class="column create-elements is-hidden" style="padding: 10px; display: flex; justify-content: center;">
+      <div class="field is-grouped">
+        <p class="control is-expanded">
+          <input id="publisher" class="input" type="text" placeholder="Enter Publisher">
+        </p>
+      </div>
+    </div>
+    <div class="column create-elements is-hidden" style="padding: 10px;  display: flex; justify-content: center;">
+      <div class="field is-grouped">
+        <p class="control is-expanded">
+          <input id="genre" class="input" type="text" placeholder="Enter Genre">
+        </p>
+      </div>
+    </div>
+    <div class="column create-elements is-hidden" style="padding: 10px;  display: flex; justify-content: center;">
+      <div class="field">
+          <textarea id="description" class="textarea" placeholder="Enter brief Synopsis"></textarea>
+      </div>
+    </div>
+    <div class="column create-elements has-text-center is-hidden" style="display: flex; justify-content: center;">
+      <p class="control">
+        <a id="input-submit" class="button is-dark">
+          Submit
+        </a>
+      </p>
+    </div>
     </div>
   </section>
 
   <!-- results div -->
-  <section class="section is-medium" style="background-color: #e6e6e6;">
+  <section class="section is-large" style="background-color: #e6e6e6;">
     <div class="container">
       <div class="column has-text-centered">
         <div class="results"></div>
@@ -122,7 +176,7 @@
     <div class="ankle">
       <img src="./img/images.png"></div>
 
-    <div class="connect">
+    <div class="connect" style="display: flex; justify-content: center;">
 
       <h6>Creators:</h6>
       <ul>
@@ -131,7 +185,7 @@
           <a href="https://github.com/tiroxxx" target="_blank"><img class="gitPic"
               src="./img/iconfinder_social__media__social_media__github__3259374 (1).png" title="github"
               alt="Github"></a>
-              
+
           <img class="ourPic" src="./img/69640390.jpg">
           <a href="https://github.com/brigil" target="_blank"><img class="gitPic"
               src="./img/iconfinder_social__media__social_media__github__3259374 (1).png" title="github"

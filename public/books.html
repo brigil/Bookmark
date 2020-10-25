@@ -54,8 +54,8 @@
   </nav>
   <!--End of navbar-->
 
-  <section id="forImg book-result" class="section is-large"
-    style=" margin-top: 0; background-color: #4d4d4d;  border-bottom: 3px solid black; border-top: 3px solid black">
+  <section id="forImg" class="section is-medium"
+    style="background-color: #4d4d4d;  border-bottom: 3px solid black; border-top: 3px solid black">
     <div class="container columns">
       <div class="column">
         <div id="book-result">
@@ -333,14 +333,6 @@
     var url = window.location.search;
     var bookId = url.split("=")[1];
 
-    getBook(bookId);
-
-    function getBook(bookId) {
-      console.log(bookId)
-      $.get("/api/search/" + bookId, (book) => {
-        displayBook(book);
-      });
-    }
 
     function showPanel(placeResult) {
       // If infoPane is already open, close it
@@ -388,31 +380,57 @@
         websitePara.appendChild(websiteLink);
         infoPane.appendChild(websitePara);
       }
-
-      // Open the infoPane
-      infoPane.classList.add("open");
     }
-    
+    // Open the infoPane
+    infoPane.classList.add("open");
+
+
+
+    getBook(bookId);
+
+    function getBook(bookId) {
+      console.log(bookId)
+      $.get("/api/search/" + bookId, (book) => {
+        displayBook(book);
+      });
+    }
+
     function displayBook(book) {
       console.log(book);
       const bookResult = $("#book-result");
       bookResult.empty();
+      const row = $("<div>");
+      const column = $("<div>");
+      const columnTwo = $("<div>");
+      row.addClass("columns")
+      column.addClass("column")
+      columnTwo.addClass("column")
 
       if (book.cover_link !== null && book.cover_link !== "") {
-        bookResult.append("<a href='/book?book_id=" + book.id + "'><img src='" + book.cover_link + "' alt='book cover'></a>");
+        column.append("<a href='/book?book_id=" + book.id + "'><img src='" + book.cover_link + "' alt='book cover'></a>");
       }
       else {
-        bookResult.append("<a href='/book?book_id=" + book.id + "'><img src='https://via.placeholder.com/150'></a>");
+        columnTwo.append("<a href='/book?book_id=" + book.id + "'><img src='https://via.placeholder.com/150'></a>");
       }
-      bookResult.append("<p>Title: " + book.title + "</p>");
-      bookResult.append("<p>Author: " + book.author + "</p>");
+      columnTwo.append("<p>Title: " + book.title + "</p>");
+      columnTwo.append("<p>Author: " + book.author + "</p>");
       if (book.average_rating !== null) {
-        bookResult.append("<p>Rating: " + book.average_rating + "</p>");
+        columnTwo.append("<p>Rating: " + book.average_rating + "</p>");
       }
       else {
-        bookResult.append("<p>Rating: N/A</p>");
+        columnTwo.append("<p>Rating: N/A</p>");
       }
-      bookResult.append("<p>Number of Pages: " + book.number_of_pages + "</p>");
+      columnTwo.append("<p>Number of Pages: " + book.number_of_pages + "</p>");
+      columnTwo.append("<p>Date Published: " + book.date_published + "</p>");
+      columnTwo.append("<p>Publisher: " + book.publisher + "</p>");
+      if (book.genre !== null || book.genre !== "")
+        columnTwo.append("<p>Genre(s): " + book.genre + "</p>");
+      columnTwo.append("<a href='" + book.amazon_link + "' target='__blank'>Buy Now!</a>");
+      columnTwo.append("<p>Description: " + book.description + "</p>");
+
+      row.append(column);
+      row.append(columnTwo);
+      bookResult.append(row);
     }
 
 

@@ -3,7 +3,7 @@
 /* eslint-disable prettier/prettier */
 $(document).ready(() => {
 
-    init();
+    // init();
 
     $("#get-author").on("click", getAuthor);
     $("#get-title").on("click", getTitle);
@@ -19,8 +19,9 @@ $(document).ready(() => {
         console.log("2 + 2 is 4");
         $(".create-elements").removeClass("is-hidden");
         $(".search-elements").addClass("is-hidden");
-
     });
+
+    $("#recommended").on("click", init);
 
     function displayOneBook(book) {
         $("#title-input").val("");
@@ -28,10 +29,10 @@ $(document).ready(() => {
         resultDiv.empty();
 
         if (book.cover_link !== null && book.cover_link !== "") {
-            resultDiv.append("<img src='" + book.cover_link + "' alt='book cover'>");
+            resultDiv.append("<a href='/book?book_id=" + book[randomBook].id + "'><img src='" + book.cover_link + "' alt='book cover'></a>");
         }
         else {
-            resultDiv.append("<img src='https://via.placeholder.com/150'>");
+            resultDiv.append("<a href='/book?book_id=" + book[randomBook].id + "'><img src='https://via.placeholder.com/150'></a>");
         }
         resultDiv.append("<p>Title: " + book.title + "</p>");
         resultDiv.append("<p>Author: " + book.author + "</p>");
@@ -61,10 +62,10 @@ $(document).ready(() => {
             column.addClass("column");
 
             if (book[i].cover_link !== null && book[i].cover_link !== "") {
-                column.append("<img src='" + book[i].cover_link + "' alt='book cover'>");
+                column.append("<a href='/book?book_id=" + book[randomBook].id + "'><img src='" + book[i].cover_link + "' alt='book cover'></a>");
             }
             else {
-                column.append("<img src='https://via.placeholder.com/350'>");
+                column.append("<a href='/book?book_id=" + book[randomBook].id + "'><img src='https://via.placeholder.com/350'></a>");
             }
             column.append("<p>Title: " + book[i].title + "</p>");
             column.append("<p>Author: " + book[i].author + "</p>");
@@ -134,10 +135,10 @@ $(document).ready(() => {
             column.addClass("column");
 
             if (book[randomBook].cover_link !== null && book[randomBook].cover_link !== "") {
-                column.append("<img src='" + book[randomBook].cover_link + "' alt='book cover'>");
+                column.append("<a href='/book?book_id=" + book[randomBook].id + "'><img src='" + book[randomBook].cover_link + "' alt='book cover'></a>");
             }
             else {
-                column.append("<img src='https://via.placeholder.com/350'>");
+                column.append("<a href='/book?book_id=" + book[randomBook].id + "'><img src='https://via.placeholder.com/350'></a>");
             }
             column.append("<p>Title: " + book[randomBook].title + "</p>");
             column.append("<p>Author: " + book[randomBook].author + "</p>");

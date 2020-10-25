@@ -3,7 +3,7 @@
 /* eslint-disable prettier/prettier */
 $(document).ready(() => {
 
-    init();
+    // init();
 
     $("#get-author").on("click", getAuthor);
     $("#get-title").on("click", getTitle);

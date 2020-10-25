@@ -10,11 +10,25 @@
     bottom: 0;
     width: 100%;
     text-align: center;
+    background-color:white;
+    border-color: black;
+    border-top: solid; 
    
+}
+.copyR1 {
+    bottom: 0; left: 0; right: 0;
+    height: 78px;
+    position: fixed;
+    text-align: center;
+    background-color:white;
+    border-color: black;
+    border-top: solid; 
+    margin-bottom: -20px;
+    padding-top: 20px ; 
 }
 
 
-.copyR { 
+.copyR  { 
     left: 0;
     bottom: 0;
     width: 100%;
@@ -22,7 +36,6 @@
     font-family: Jazz LET, fantasy;
     padding-bottom: 10px;
     margin-bottom: -15px
-
 }
 
 .markF, .connect {
@@ -48,46 +61,58 @@
     left: 0;
     bottom: 0;
     width: 100%;
-    margin-bottom: 50px;
-    padding-left: 50px; 
+    margin-bottom: 10px;
+    padding-left: 70px; 
+    padding-top: 20px;
 }
-footer{
-    background-color:white;
-    border-color: black;
-    border-top: solid;
+.bookQuote {
+    padding-top: 50px;
 }
 
-
+/* Navbar for members, log in, sign in pages */
 #homeBtn {
  color: white;
  background-color: black;
  margin-top: 10px;
- font-family: Arial, Helvetica, sans-serif;
+ font-family: Geneva, Tahoma, Verdana, sans-serif;
  float: right;
  margin-right: 5px;
- 
+ font-size: 16px;  
+ text-transform: capitalize;
+ font-weight: bolder;
 }
 
 #signupBtn {
     color: black;
     margin-top: 10px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Geneva, Tahoma, Verdana, sans-serif;
     float: right;
-    margin-right: 5px;     
+    margin-right: 5px;  
+    font-size: 16px; 
+    text-transform: capitalize;
 }
 
 .navbar{
     background-color: white;
+    border-radius: 0 !important;
 }
 
+#logoNav{
+    padding-left: -5px;
+}
+
+/* image for members, log in and sign in page */
 .loginPage, .memberPage, .signupPage {
     background-image: url("../img/pexels-janko-ferlic-590493.jpg");
+    background-attachment: fixed;
+    background-size: 100%;
     background-size: cover;
-    background-repeat: no-repeat;
-    
-    
+    background-position: center;  
 }
 
+
+
+/* card-body for members, log in and sign in html */
 .card-body{
     background-color: rgba(245, 245, 245, 0.5);
     margin-top: 80px;
@@ -96,7 +121,7 @@ footer{
     border-radius: 5px;
     text-align: center;
 }
-
+/* image for index and books html */
 #forImg {
     background-image: url("../img/books_old_reading_124989_2560x1080.jpg");
     height: auto;
@@ -151,7 +176,7 @@ footer{
     color: black;
     
   }
-  .details, p {
+  .details, .p1 {
     color: white;
     font-size: 14px;
     padding: 10px;

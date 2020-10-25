@@ -61,10 +61,6 @@ module.exports = function (app) {
         title: req.body.title
       }
     }).then(response => {
-      console.log(response.id);
-      console.log(response.author);
-      console.log(response.number_of_pages);
-      console.log(response.amazon_link);
       console.log("Success!");
       res.json(response);
     });
@@ -90,15 +86,25 @@ module.exports = function (app) {
       }
     })
       .then((book) => {
-        console.log(book);
         res.json(book);
       });
   });
 
-  app.post("/api/create-book", (req, res) => {
-    db.Book.create(req.body).then( response => {
+  app.get("/api/search/:id", (req, res) => {
+    console.log(req.params);
+    db.Book.findOne({
+      where: {
+        id: req.params.id
+      }
+    }).then(response => {
+      console.log("Success!");
       res.json(response);
     });
   });
 
+  app.post("/api/create-book", (req, res) => {
+    db.Book.create(req.body).then(response => {
+      res.json(response);
+    });
+  });
 };

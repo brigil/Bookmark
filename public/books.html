@@ -26,7 +26,7 @@
   <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <a class="navbar-item" href="./index.html">
-        <img src="../public/img/images1.png" width="112" height="28">
+        <img src="./img/images1.png" width="112" height="28">
       </a>
       <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
         data-target="navbarBasicExample">
@@ -117,11 +117,6 @@
         </li>
       </ul>
     </div>
-    <!-- <div class="bookQuote">
-      <blockquote> <p>“Fairy tales are more than true: not because they tell us that dragons exist, but because they tell us that dragons can be beaten.”
-– Neil Gaiman</p></blockquote>
-    </div> -->
-
 
     <h5 class="copyR"><span class="bookF"> &copy; Book</span><span class="markF">Mark </span> | los-bookies</h5>
   </footer>
@@ -330,8 +325,7 @@
     }
 
 
-    var url = window.location.search;
-    var bookId = url.split("=")[1];
+
 
 
     function showPanel(placeResult) {
@@ -380,12 +374,15 @@
         websitePara.appendChild(websiteLink);
         infoPane.appendChild(websitePara);
       }
+      // Open the infoPane
+      infoPane.classList.add("open");
     }
-    // Open the infoPane
-    infoPane.classList.add("open");
 
 
 
+
+    var url = window.location.search;
+    var bookId = url.split("=")[1];
     getBook(bookId);
 
     function getBook(bookId) {

@@ -3,14 +3,18 @@
 ## Group Name
 
   Los-Bookies
+  
 ## Project Name  
+
   Bookmark
   
 ## Link to the KanBan Board
-```https://github.com/brigil/project2/projects/1```
+
+https://github.com/brigil/project2/projects/1
 
 ## Link to the Project Repo
-```https://github.com/brigil/project2```
+
+https://github.com/brigil/project2
 
 ## Burndown Schedule 
 ``` Tuesday 20th ( Plan, Design, Research )
@@ -50,5 +54,6 @@ https://www.kaggle.com/zygmunt/goodbooks-10k?select=books.csv
 
 ## Wireframes and Mockups (Screenshots or photos of whiteboard drawings/Mockups of the pages needed)
 
-![Base design](https://user-images.githubusercontent.com/70404735/97122712-58aa6b80-16fe-11eb-9665-d375227c67ee.png)
+![Design](https://user-images.githubusercontent.com/70404735/97123061-46313180-1700-11eb-9cf7-26917769ab54.png)
+
 

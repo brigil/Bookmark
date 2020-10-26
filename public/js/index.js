@@ -27,23 +27,30 @@ $(document).ready(() => {
         $("#title-input").val("");
         const resultDiv = $(".results");
         resultDiv.empty();
-        
+        const row = $("<div>");
+        row.addClass("columns");
+        const column = $("<div>");
+        column.addClass("column book-element");
+
+
 
         if (book.cover_link !== null && book.cover_link !== "") {
-            resultDiv.append("<a href='/book?book_id=" + book.id + "'><img src='" + book.cover_link + "' alt='book cover'></a>");
+            column.append("<a href='/book?book_id=" + book.id + "'><img src='" + book.cover_link + "' alt='book cover'></a>");
         }
         else {
-            resultDiv.append("<a href='/book?book_id=" + book.id + "'><img src='https://via.placeholder.com/150'></a>");
+            column.append("<a href='/book?book_id=" + book.id + "'><img src='https://via.placeholder.com/350'></a>");
         }
-        resultDiv.append("<p class='title'>" + book.title + "</p>");
-        resultDiv.append("<p class='content'>Author: " + book.author + "</p>");
+        column.append("<p class='title'>" + book.title + "</p>");
+        column.append("<p class='content'>Author: " + book.author + "</p>");
         if (book.average_rating !== null) {
-            resultDiv.append("<p class='content'>Rating: " + book.average_rating + "</p>");
+            column.append("<p class='content'>Rating: " + book.average_rating + "</p>");
         }
         else {
-            resultDiv.append("<p class='content'>Rating: N/A</p>");
+            column.append("<p class='content'>Rating: N/A</p>");
         }
-        resultDiv.append("<p class='content'>Number of Pages: " + book.number_of_pages + "</p>");
+        column.append("<p class='content'>Number of Pages: " + book.number_of_pages + "</p>");
+        row.append(column);
+        resultDiv.append(row);
     }
 
     function displayBooks(book) {
@@ -81,7 +88,6 @@ $(document).ready(() => {
             column.append("<p class='content'>Number of Pages: " + book[i].number_of_pages + "</p>");
             row.append(column);
             resultDiv.append(row);
-
         }
     }
 

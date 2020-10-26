@@ -13,6 +13,8 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/signup.html"));
   });
 
+
+
   app.get("/login", (req, res) => {
     // If the user already has an account send them to the members page
     if (req.user) {
@@ -23,6 +25,10 @@ module.exports = function(app) {
 
   app.get("/loggedin", (req, res) => {
     res.sendFile(path.join(__dirname, "../public/loggedin.html"));
+  });
+
+  app.get("/signup", (req, res) => {
+    res.sendFile(path.join(__dirname, "../public/signup.html"));
   });
 
   app.get("/book", (req, res) => {

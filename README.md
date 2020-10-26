@@ -37,11 +37,14 @@ SO THAT I can find more interesting books to read
 ```
 ## Technologys and databases used
 
-``` Technologys used
-HTML, Css, Javascript, Bulma, MYSQL, bcyrptjs, express, pasport, sequlize
+``` Technologys used ```
+```
+HTML, CSS, Javascript, Bulma, MYSQL, bcyrptjs, express, pasport, sequlize
 ```
 
-``` Databases used
+``` Databases used ```
+
+```
 https://www.kaggle.com/zygmunt/goodbooks-10k?select=books.csv 
 ```
 

@@ -4,6 +4,7 @@
 const db = require("../models");
 const passport = require("../config/passport");
 const { Op } = require("sequelize");
+const { response } = require("express");
 
 module.exports = function (app) {
   // Using the passport.authenticate middleware with our local strategy.
@@ -107,4 +108,5 @@ module.exports = function (app) {
       res.json(response);
     });
   });
+
 };

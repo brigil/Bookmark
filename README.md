@@ -44,7 +44,7 @@ SO THAT I can find more interesting books to read
 
 ``` Technologys used ```
 
-HTML, CSS, Javascript, Bulma, MYSQL, bcyrptjs, express, pasport, sequlize
+HTML, CSS, Javascript, Bulma, MYSQL, bcyrptjs, express, passport, sequlize
 
 ``` Databases used ```
 

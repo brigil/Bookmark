@@ -133,6 +133,7 @@
   background-image: url("../img/books_old_reading_124989_2560x1080.jpg");
   height: auto;
   background-size: cover;
+  padding-bottom: 10px;
 }
 
 #forImg2 {

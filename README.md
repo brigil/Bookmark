@@ -29,8 +29,9 @@ Monday 26th  ( Presentation Time! )
 ## Overview of the project
 
 ``` 
-Bookmark is a website that alows you to see recomended books, search for a books, and add a book to the database.
-From there you can see more details on the book you search and select, and you can add the book to your "favorites" on your account.
+Bookmark is a website that alows you to see recomended books, search for books, and add a book to the database.
+From there you can see more details on the book you search and select.
+You can also add the book to your "favorites" section on your account.
 ```
 
 ## User story
@@ -42,15 +43,12 @@ SO THAT I can find more interesting books to read
 ## Technologys and databases used
 
 ``` Technologys used ```
-```
+
 HTML, CSS, Javascript, Bulma, MYSQL, bcyrptjs, express, pasport, sequlize
-```
 
 ``` Databases used ```
 
-```
-https://www.kaggle.com/zygmunt/goodbooks-10k?select=books.csv 
-```
+  https://www.kaggle.com/zygmunt/goodbooks-10k?select=books.csv 
 
 ## Wireframes and Mockups (Screenshots or photos of whiteboard drawings/Mockups of the pages needed)
 

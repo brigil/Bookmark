@@ -268,14 +268,14 @@ function displayBook(book) {
     const column = $("<div>");
     const columnTwo = $("<div>");
     row.addClass("columns");
-    column.addClass("column");
-    columnTwo.addClass("column");
+    column.addClass("column is-half");
+    columnTwo.addClass("column is-one-third book-page");
 
     if (book.cover_link !== null && book.cover_link !== "") {
-        column.append("<a href='/book?book_id=" + book.id + "'><img class='cover-img' src='" + book.cover_link + "' alt='book cover'></a>");
+        column.append("<a class='float-right' href='/book?book_id=" + book.id + "'><img class='cover-img' src='" + book.cover_link + "' alt='book cover'></a>");
     }
     else {
-        columnTwo.append("<a href='/book?book_id=" + book.id + "'><img src='https://via.placeholder.com/250'></a>");
+        column.append("<a class='float-right' class='float-right'href='/book?book_id=" + book.id + "'><img src='https://via.placeholder.com/250'></a>");
     }
     columnTwo.append("<p class='title book-page'>" + book.title + "</p>");
     columnTwo.append("<p class='content book-page'>Author: " + book.author + "</p>");

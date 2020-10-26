@@ -10,11 +10,11 @@
   
 ## Link to the KanBan Board
 
-https://github.com/brigil/project2/projects/1
+https://github.com/brigil/Bookmark/projects/1
 
 ## Link to the Project Repo
 
-https://github.com/brigil/project2
+https://github.com/brigil/Bookmark
 
 ## Burndown Schedule 
 ``` Tuesday 20th ( Plan, Design, Research )

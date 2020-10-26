@@ -23,6 +23,13 @@ Monday 26th  ( Presentation Time! )
 ```
 
 ## Overview of the project
+
+``` 
+Bookmark is a website that alows you to see recomended books, search for a books, and add a book to the database.
+From there you can see more details on the book you search and select, and you can add the book to your "favorites" on your account.
+```
+
+## User story
 ```
 AS A avid book reader
 I WANT to see detailed information about new books im looking at
